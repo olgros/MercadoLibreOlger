@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Mercado libre-->
+        <scene sceneID="CgL-po-XEL">
+            <objects>
+                <viewController storyboardIdentifier="ListingView" id="Qw0-HH-qJp" customClass="ListingView" customModule="MercadoLibreOlger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cNZ-cK-AlN">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Swc-U8-tKG">
+                                <rect key="frame" x="0.0" y="130" width="414" height="732"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="13" translatesAutoresizingMaskIntoConstraints="NO" id="8by-Lf-DTX">
+                                <rect key="frame" x="20" y="54" width="374" height="40"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="dch-hj-EjI">
+                                        <rect key="frame" x="0.0" y="0.0" width="291" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="9GT-I9-9yz"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g3L-mx-7pU">
+                                        <rect key="frame" x="304" y="0.0" width="70" height="40"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yEc-xq-pUt" customClass="UIButtonAccent" customModule="MercadoLibreOlger" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="5" width="70" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="oDF-4W-mwt"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                                <state key="normal" title="Buscar"/>
+                                                <connections>
+                                                    <action selector="onSearch:" destination="Qw0-HH-qJp" eventType="touchUpInside" id="iCE-AT-Eaj"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstItem="yEc-xq-pUt" firstAttribute="centerX" secondItem="g3L-mx-7pU" secondAttribute="centerX" id="8QN-Vb-vN3"/>
+                                            <constraint firstItem="yEc-xq-pUt" firstAttribute="centerY" secondItem="g3L-mx-7pU" secondAttribute="centerY" id="DyR-St-Yyh"/>
+                                            <constraint firstItem="yEc-xq-pUt" firstAttribute="leading" secondItem="g3L-mx-7pU" secondAttribute="leading" id="LbW-NF-9sM"/>
+                                            <constraint firstAttribute="trailing" secondItem="yEc-xq-pUt" secondAttribute="trailing" id="RVi-Vn-79J"/>
+                                            <constraint firstAttribute="width" constant="70" id="wi2-Kg-1Cw"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="eXj-TK-rvv">
+                                <rect key="frame" x="188.5" y="110" width="37" height="37"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="bfr-zX-QXy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="eXj-TK-rvv" firstAttribute="centerX" secondItem="cNZ-cK-AlN" secondAttribute="centerX" id="J1C-Gb-3f7"/>
+                            <constraint firstItem="Swc-U8-tKG" firstAttribute="trailing" secondItem="bfr-zX-QXy" secondAttribute="trailing" id="Krn-4r-cRa"/>
+                            <constraint firstItem="Swc-U8-tKG" firstAttribute="bottom" secondItem="bfr-zX-QXy" secondAttribute="bottom" id="XlP-sb-9mu"/>
+                            <constraint firstItem="eXj-TK-rvv" firstAttribute="top" secondItem="8by-Lf-DTX" secondAttribute="bottom" constant="16" id="aDW-fC-Cch"/>
+                            <constraint firstItem="8by-Lf-DTX" firstAttribute="leading" secondItem="bfr-zX-QXy" secondAttribute="leading" constant="20" id="bSa-00-9rn"/>
+                            <constraint firstItem="Swc-U8-tKG" firstAttribute="top" secondItem="8by-Lf-DTX" secondAttribute="bottom" constant="36" id="bVB-ds-qmb"/>
+                            <constraint firstItem="8by-Lf-DTX" firstAttribute="top" secondItem="bfr-zX-QXy" secondAttribute="top" constant="10" id="hcg-cl-6U9"/>
+                            <constraint firstItem="bfr-zX-QXy" firstAttribute="trailing" secondItem="8by-Lf-DTX" secondAttribute="trailing" constant="20" id="kzA-aJ-JjS"/>
+                            <constraint firstItem="Swc-U8-tKG" firstAttribute="leading" secondItem="bfr-zX-QXy" secondAttribute="leading" id="vVd-Cb-iZH"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Mercado libre" id="F3L-Os-6KE"/>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="eXj-TK-rvv" id="dvz-hP-aFg"/>
+                        <outlet property="searchBar" destination="dch-hj-EjI" id="Bnr-R4-w1V"/>
+                        <outlet property="tableView" destination="Swc-U8-tKG" id="c6V-9D-qnO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HIX-EK-Lh7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1005.7971014492755" y="16.741071428571427"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

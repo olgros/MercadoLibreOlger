@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Gl6-un-jg0">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Search View-->
+        <scene sceneID="akV-KS-LwP">
+            <objects>
+                <viewController storyboardIdentifier="SearchView" id="2lb-tc-S3H" customClass="SearchView" customModule="MercadoLibreOlger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="h7E-oJ-N4i">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="29" translatesAutoresizingMaskIntoConstraints="NO" id="Kdd-Nu-2NE">
+                                <rect key="frame" x="20" y="118" width="374" height="125"/>
+                                <subviews>
+                                    <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="mKG-9M-geZ">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="56" id="pkd-n6-ngQ"/>
+                                        </constraints>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </searchBar>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0SK-3j-zb1" customClass="UIButtonAccent" customModule="MercadoLibreOlger" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="85" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="mZL-sQ-dlL"/>
+                                        </constraints>
+                                        <state key="normal" title="Buscar"/>
+                                        <connections>
+                                            <action selector="onSearch" destination="2lb-tc-S3H" eventType="touchUpInside" id="qUz-AB-QSM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="0SK-3j-zb1" secondAttribute="trailing" id="1jH-Y1-DLJ"/>
+                                    <constraint firstAttribute="trailing" secondItem="mKG-9M-geZ" secondAttribute="trailing" id="YVe-9r-BXb"/>
+                                    <constraint firstItem="mKG-9M-geZ" firstAttribute="leading" secondItem="Kdd-Nu-2NE" secondAttribute="leading" id="ahf-iu-EJY"/>
+                                    <constraint firstItem="0SK-3j-zb1" firstAttribute="leading" secondItem="Kdd-Nu-2NE" secondAttribute="leading" id="cJL-xQ-D4o"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="45e-VR-uAG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="45e-VR-uAG" firstAttribute="trailing" secondItem="Kdd-Nu-2NE" secondAttribute="trailing" constant="20" id="7z8-E8-IKV"/>
+                            <constraint firstItem="Kdd-Nu-2NE" firstAttribute="leading" secondItem="45e-VR-uAG" secondAttribute="leading" constant="20" id="LnS-36-J4l"/>
+                            <constraint firstItem="Kdd-Nu-2NE" firstAttribute="top" secondItem="45e-VR-uAG" secondAttribute="top" constant="30" id="vqM-oA-ebe"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="fGV-a6-jYA"/>
+                    <connections>
+                        <outlet property="searhBar" destination="mKG-9M-geZ" id="UGi-C3-wQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iWf-ge-2hc" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1139.1304347826087" y="107.8125"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="O0s-NJ-3mF">
+            <objects>
+                <navigationController storyboardIdentifier="Navigation" automaticallyAdjustsScrollViewInsets="NO" id="Gl6-un-jg0" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="LGM-Oq-XDb">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="2lb-tc-S3H" kind="relationship" relationship="rootViewController" id="2nd-bH-Kme"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oq2-Gi-B7v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="228.98550724637684" y="107.8125"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

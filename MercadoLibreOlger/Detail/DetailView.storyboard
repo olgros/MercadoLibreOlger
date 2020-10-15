@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Detail View-->
+        <scene sceneID="drj-bb-CyC">
+            <objects>
+                <viewController storyboardIdentifier="DetailView" id="f1f-1y-Syu" customClass="DetailView" customModule="MercadoLibreOlger" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="PFu-ni-ziS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Vpk-I9-zjw">
+                                <rect key="frame" x="0.0" y="44" width="414" height="739"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YUJ-bs-ThG" customClass="UIButtonAccent" customModule="MercadoLibreOlger" customModuleProvider="target">
+                                <rect key="frame" x="20" y="812" width="374" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="hsz-1z-d1y"/>
+                                </constraints>
+                                <state key="normal" title="Comprar"/>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Q6b-9l-fmG"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="YUJ-bs-ThG" firstAttribute="leading" secondItem="Q6b-9l-fmG" secondAttribute="leading" constant="20" id="5u1-H2-cTI"/>
+                            <constraint firstItem="YUJ-bs-ThG" firstAttribute="top" secondItem="Vpk-I9-zjw" secondAttribute="bottom" constant="29" id="BmC-xQ-Mbe"/>
+                            <constraint firstItem="YUJ-bs-ThG" firstAttribute="centerX" secondItem="PFu-ni-ziS" secondAttribute="centerX" id="F9T-Vl-ZRu"/>
+                            <constraint firstItem="Q6b-9l-fmG" firstAttribute="bottom" secondItem="YUJ-bs-ThG" secondAttribute="bottom" constant="10" id="GoW-Ag-XC4"/>
+                            <constraint firstItem="Vpk-I9-zjw" firstAttribute="leading" secondItem="Q6b-9l-fmG" secondAttribute="leading" id="PXM-eg-PNg"/>
+                            <constraint firstItem="Vpk-I9-zjw" firstAttribute="top" secondItem="Q6b-9l-fmG" secondAttribute="top" id="Qqh-1c-I5U"/>
+                            <constraint firstItem="Q6b-9l-fmG" firstAttribute="trailing" secondItem="YUJ-bs-ThG" secondAttribute="trailing" constant="20" id="bFU-Ah-33W"/>
+                            <constraint firstItem="Vpk-I9-zjw" firstAttribute="trailing" secondItem="Q6b-9l-fmG" secondAttribute="trailing" id="tJf-IV-fhf"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="Vpk-I9-zjw" id="Drq-s7-9Pt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ClL-un-ZaE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-17.39130434782609" y="34.821428571428569"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

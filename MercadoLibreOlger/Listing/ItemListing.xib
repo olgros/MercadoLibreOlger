@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="ItemListingViewCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="164" id="NyK-6j-Ne3" customClass="ItemListingViewCell" customModule="MercadoLibreOlger" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="535" height="164"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="NyK-6j-Ne3" id="aJ0-dj-icg">
+                <rect key="frame" x="0.0" y="0.0" width="535" height="164"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xsa-0B-Htb">
+                        <rect key="frame" x="20" y="17" width="120" height="130"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="130" id="sS0-OS-UZx"/>
+                            <constraint firstAttribute="width" constant="120" id="sbE-FR-M1O"/>
+                        </constraints>
+                    </imageView>
+                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="q1p-bT-Hi6">
+                        <rect key="frame" x="160" y="56" width="355" height="52"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nombre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wkc-3n-ThM" customClass="UILabelMultiline" customModule="MercadoLibreOlger" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="18"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Precio" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dL9-gX-YGK">
+                                <rect key="frame" x="0.0" y="34" width="355" height="18"/>
+                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="q1p-bT-Hi6" secondAttribute="trailing" constant="20" id="Caq-9y-NGk"/>
+                    <constraint firstItem="q1p-bT-Hi6" firstAttribute="centerY" secondItem="aJ0-dj-icg" secondAttribute="centerY" id="LQp-XG-rbx"/>
+                    <constraint firstItem="q1p-bT-Hi6" firstAttribute="leading" secondItem="xsa-0B-Htb" secondAttribute="trailing" constant="20" id="UqB-lN-vjE"/>
+                    <constraint firstItem="xsa-0B-Htb" firstAttribute="leading" secondItem="aJ0-dj-icg" secondAttribute="leading" constant="20" id="Xu1-cE-3kA"/>
+                    <constraint firstItem="xsa-0B-Htb" firstAttribute="top" secondItem="aJ0-dj-icg" secondAttribute="top" constant="17" id="e2n-G3-06O"/>
+                    <constraint firstItem="xsa-0B-Htb" firstAttribute="centerY" secondItem="aJ0-dj-icg" secondAttribute="centerY" id="iWx-B4-f9o"/>
+                    <constraint firstAttribute="bottom" secondItem="xsa-0B-Htb" secondAttribute="bottom" constant="17" id="vii-tq-ac3"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="imageProduct" destination="xsa-0B-Htb" id="eER-Vl-rdv"/>
+                <outlet property="lblPrice" destination="dL9-gX-YGK" id="Cut-aD-WRd"/>
+                <outlet property="lblTitle" destination="wkc-3n-ThM" id="jIn-aQ-naa"/>
+            </connections>
+            <point key="canvasLocation" x="235.50724637681162" y="-127.23214285714285"/>
+        </tableViewCell>
+    </objects>
+</document>

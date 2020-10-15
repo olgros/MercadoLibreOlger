@@ -29,5 +29,32 @@ class MercadoLibreOlgerTests: XCTestCase {
             // Put the code you want to measure the time of here.
         }
     }
+    
+    func testListingInteractor(){
+        let mockListingPresenter = MockListingPresenter()
+        let interactor: ListingInteractorInputProtocol = ListingInteractor()
+        interactor.presenter = mockListingPresenter
+        interactor.search("camisas")
+        wait(for: [mockListingPresenter.expectationResults], timeout: 10.0)
+        XCTAssertNotNil(mockListingPresenter.results, "no se pudo obtener items")
+    }
+    
+}
 
+
+class MockListingPresenter: ListingInteractorOutputProtocol {
+     
+    var expectationResults = XCTestExpectation(description: "test api products ")
+    var results: Array<Result>?
+    
+    func onSuccess(results: Array<Result>) {
+        self.results = results
+        expectationResults.fulfill()
+        
+    }
+    
+    func onError(error: ErrorApi) {
+        expectationResults.fulfill()
+    }
+    
 }
