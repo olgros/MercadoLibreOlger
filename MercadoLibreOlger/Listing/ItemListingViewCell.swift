@@ -2,7 +2,7 @@
 /**
 MercadoLibreOlger
 Created by: Olger Rosero on 14/10/20
-Copyright (c)  Fincaraiz.com.co
+Copyright (c)  olger.com.co
 */
 
 import UIKit
