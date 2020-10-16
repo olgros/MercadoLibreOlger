@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Search View-->
+        <!--Mercado libre-->
         <scene sceneID="akV-KS-LwP">
             <objects>
                 <viewController storyboardIdentifier="SearchView" id="2lb-tc-S3H" customClass="SearchView" customModule="MercadoLibreOlger" customModuleProvider="target" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                             <constraint firstItem="Kdd-Nu-2NE" firstAttribute="top" secondItem="45e-VR-uAG" secondAttribute="top" constant="30" id="vqM-oA-ebe"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="fGV-a6-jYA"/>
+                    <navigationItem key="navigationItem" title="Mercado libre" id="fGV-a6-jYA"/>
                     <connections>
                         <outlet property="searhBar" destination="mKG-9M-geZ" id="UGi-C3-wQq"/>
                     </connections>
